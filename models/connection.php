@@ -7,12 +7,17 @@ class Connection
     private $password = "";
     private $data_base = "guess";
 
-    public function conect() {
+    public function connect() {
         $conn = new mysqli( 
             $this->host, 
             $this->user, 
             $this->password, 
             $this->data_base);
+        
+        if ($conn->connect_errno) {
+                printf("Conexión fallida: %s\n", $conn->connect_error);
+                exit();
+            }
 
         return $conn;
     }
