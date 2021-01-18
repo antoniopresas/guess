@@ -13,6 +13,8 @@ class Connection
             $this->user, 
             $this->password, 
             $this->data_base);
+
+        return $conn;
     }
 
 }

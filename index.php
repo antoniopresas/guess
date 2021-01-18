@@ -1,3 +1,3 @@
 <?php 
 
-require_once(./connection);
+require_once('./models/connection.php');
